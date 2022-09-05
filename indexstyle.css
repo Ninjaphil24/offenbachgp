@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:wght@700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+body {
+    background: url(images/pattern1.png);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	background-position:center;
+
+    /* -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite; */
+}
+
+/* @-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+} */
+.myButton {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:14px 39px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.cookie-banner
+{
+    display: none;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+}
+.cookie-banner .container 
+{
+    margin: 0 auto;
+    width: 70%;
+    color: #f0f0f0;
+    padding: 15px;
+
+}
+.cookie-banner a
+{
+    color:slategray;
+}
+
+.cookie-banner .button
+{    background: #ccc;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-bottom: 2px solid #aaa;
+}
+.cookie-banner button:hover
+{
+    background:rgb(36, 172, 9);
+}
+
+
+header 
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .sponsor img {
+height: 50px;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;    
+}
+/* header .logo1
+{   
+    position: fixed;
+    right: 100px;
+    top: 5vh;
+    display: inline-block;
+}
+header .logo2
+{   
+    position: fixed;
+    right: 120px;
+    top: 3vh;
+    display: inline-block;
+}
+header .logo3
+{   
+    position: fixed;
+    right: 295px;
+    top: 3vh;
+    display: inline-block;
+}header .logo4
+{   
+    position: fixed;
+    right: 250px;
+    top: 3vh;
+    display: inline-block;
+}
+header img
+{       
+    height: 30px;
+    margin: 0 auto;
+} */
+header .toggle
+{
+    position: fixed;
+    right:0;
+    width: 40px;
+    height: 40px;
+    background: url(menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .toggle.active
+{
+    background: url(close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 25px;
+}
+header .toggle:before
+{   
+    content: 'Menu';
+    position: absolute;
+    right: 45px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 2px 5px;
+    background: #fff;
+    color: #111;
+}
+section video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.glass
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    box-shadow: 10px 0 15px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    transition-delay: 0.4s;
+
+}
+section.active .glass
+{
+    width: 100%;
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 0 15px rgba(0,0,0,0.5);
+    transition-delay: 0s;
+}
+section .content
+{
+    position: relative;
+    margin-top: 15vw;
+    margin-bottom: 120vw;
+    z-index: 100;
+    text-align: center;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+section.active .content
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-200px);
+    transition-delay: 0s;
+}
+section .content h2
+{
+    position: relative;
+    margin-top: 150px;
+    color: #fff;
+    font-size: 10vw;
+    line-height: 0.55em;
+    text-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    font-family: 'Dancing Script', cursive;
+}
+section .content h2 span
+{
+    font-size: 0.2em;
+    font-weight: 300;
+    letter-spacing: 5px;
+    background: #fff;
+    color: #111;
+    padding: 0 10px;
+    text-shadow: 0 5px 5px rgba(0,0,0,0);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+}
+section .langbutton a
+{
+    padding: 2px;
+    color: #111;
+    background: #fff;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+section .langbutton a:hover
+{
+    background: #111;
+    color: #fff;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+}
+section .sponsors
+{
+    z-index: 100;
+}
+
+section .sci
+{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    display: block;
+    z-index: 100;
+}
+
+section .sci li
+{
+    list-style: none;
+    margin: 5px;
+    padding: 0 6px;
+    background: #fff;
+    transition: 0.2s;
+    transition-delay: calc(0.2s * var(--i));
+}
+section.active .sci li
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+}
+section .sci li a
+{
+    color: #111;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+section .sci li a:hover
+{
+    background: #111;
+    color: #fff;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+}
+
+section .about
+{
+    position: relative;
+    margin-top: 10vw;
+    margin-right: 40%;
+    margin-left: 10%;
+    z-index: 10;
+    text-align: center;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+section.active .about
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-200px);
+    transition-delay: 0s;
+}
+section .about h3
+{
+    position: relative;
+    /* margin-top: 150px; */
+    font-size: 1.4em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background: #fff;
+    color: #111;
+    padding: 10px 10px;
+    text-shadow: 0 5px 5px rgba(0,0,0,0);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    text-align: left;
+}
+section .annegret
+{
+  position: relative;
+ margin-top: 15px;
+ left: 25%;
+}
+section .annegret .cover
+{
+  width: 200px;
+  height:120px;
+  object-fit: cover;
+  object-position: left top;
+}
+section .vaccaro
+{
+  position: relative;
+ margin-top: 15px;
+ left: 38%;
+}
+section .vaccaro .cover
+{
+  width: 200px;
+  height:120px;
+  object-fit: cover;
+  object-position: left top;
+}
+
+section .romana
+{
+    position: relative;
+   margin-top: 15px;
+   left: 42%;
+}
+section .romana .cover
+{
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+}
+
+
+section .kassandra
+{
+    position: relative;
+    margin-top: 15px;
+    left: 46%;
+}
+section .kassandra .cover
+{
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  object-position: top left;
+}
+
+section .philip
+{
+    position: relative;
+    margin-top: 15px;
+    left: 50%;
+  }
+section .philip .cover
+{
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+
+section .richard
+{
+    position: relative;
+    margin-top: 15px;
+    left: 54%;
+  }
+section .richard .cover
+{
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+
+section .deliso
+{
+    position: relative;
+    margin-top: 15px;
+    left: 48%;
+  }
+section .deliso .cover
+{
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+
+section .vitali
+{
+    position: relative;
+    margin-top: 15px;
+    left: 44%;
+  }
+section .vitali .cover
+{
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+
+
+section .card1
+{
+
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 120px;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+section .card1 .front
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+section .card1:hover .front
+{
+  transform: rotateX(-180deg);
+}
+
+section .card1 .back
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+
+}
+section .card1:hover .back
+{
+  transform: rotateX(0deg);
+}
+section .card1 .back .details
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+section .card1 .back .details h2
+{
+margin: 0;
+padding: 0;
+font-size: 13px;
+color: #fff;
+}
+section .card1 .back .details h2 span
+{
+  color: #a7a7a7;
+  font-size: 10px;
+}
+
+section .social-icons
+{
+padding: 10px 0;
+
+}
+section .social-icons a
+{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  background: #262626;
+  color:#fff;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+section .social-icons a .fa
+{
+  line-height: 36px;
+}
+section .social-icons a:hover
+{
+background: #e91e63;
+}
+
+section .box
+{
+    position: relative;
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+section .box h2
+{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+section .box .inputBox
+{
+    position: relative;
+}
+section .box .inputBox input
+{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;    
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+section .box .inputBox label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+section .box .inputBox input:focus ~ label,
+section .box .inputBox input:valid ~ label
+{
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+section .box input[type="submit"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+section .navigation
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+section .navigation li
+{
+    list-style: none;
+    text-align: center;
+    margin: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    transform: translateX(200px);
+    transition-delay: calc(0.2s * var(--i));
+}
+section.active .navigation li
+{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);   
+}
+
+section .navigation li a
+{
+    color: #111;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    background: #fff;
+    padding: 4px 10px;
+    display: inline-block;
+}
+section .navigation li a:hover
+{
+    background: #111;
+    color: #fff;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+}
+section video
+{
+    position: fixed;
+}
+@media (max-width: 800px)
+{
+    header .sponsor img {
+        height: 30px;
+        }
+    /* section .sci
+    {
+        bottom: 20px;
+        right: 20px;
+    } */
+    .glass
+    {
+        width: 50%;
+    }
+    section .content h2 
+    {
+        font-size: 18vw;
+    }
+    section .content h2 span
+{
+    font-size: 0.25em;
+    letter-spacing: 2px;    
+    padding: 0 5px;    
+}
+section .about
+{
+    position: relative;
+    margin-right: 40%;
+    margin-left: 10%;
+    z-index: 10;
+    text-align: center;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+section.active .about
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-200px);
+    transition-delay: 0s;
+}
+section .about h3
+{
+    position: relative;
+    /* margin-top: 150px; */
+    font-size: 0.6em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background: #fff;
+    color: #111;
+    padding: 10px 10px;
+    text-shadow: 0 5px 5px rgba(0,0,0,0);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    text-align: left;
+}
+section .box
+{
+    position: relative;
+    top: 600px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+}
+@media (max-width: 400px)
+{
+    header .sponsor img {
+        height: 20px;
+        }
+    
+    header img
+    {
+        height: 18px;
+    }
+}

@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 2px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  background: url(img/eggpattern.jpg);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	background-position:center;
+}
+
+section
+{
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
+section .user h3
+{
+  background: white;
+  border-radius: 30px;
+  font-size: 2vw;
+  padding: 3px;
+  display: block;
+  float: left;
+  color: rgb(255, 0, 170);
+}
+section .crop img
+{
+  background: white;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  object-fit: cover;
+ border-radius: 50%;
+ display: block;
+  float: left;
+}
+
+.back
+{
+  position: relative;
+  float: right;
+}
+
+.back a {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #fafaa3 5%, #f8ff24 100%);
+	background-color:#fafaa3;
+	border-radius:24px;
+	border:2px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ff00ae;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:12px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffe524;
+}
+.back a:hover {
+	background:linear-gradient(to bottom, #ff6224 5%, #a6faa3 100%);
+	background-color:#7824ff;
+}
+.back a:active {
+	position:relative;
+	top:1px;
+}
+.banner
+{
+  background:rgba(219, 0, 0, 0.747);
+  
+}
+.banner .content h2
+{
+  color: white;
+}
+.banner .trailer h2
+{
+  color: white;
+}
+.banner .content img
+{
+  width: 30%;
+}
+
+.judgevote
+{
+  position: relative;
+  left: 0;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #ff573a 5%, #cf4646 100%);
+	background-color:#63eed0;
+	border-radius:6px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	cursor:pointer;
+	color:#14396a;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 40px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7cacde;
+}
+
+.judgevote span
+{
+  font-size: x-large;
+  color: #fff;
+}
+.judgevote:hover {
+	background:linear-gradient(to bottom, #cf46a6 5%, #e0ee63 100%);
+	background-color:#e2cdcd;
+}
+.like
+{
+  position: relative;
+  left: 0;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63ee6f 5%, #46cf5d 100%);
+	background-color:#63b8ee;
+	border-radius:6px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	cursor:pointer;
+	color:#14396a;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7cacde;
+}
+
+.like span
+{
+  font-size: x-large;
+  color: #fff;
+}
+.like:hover {
+	background:linear-gradient(to bottom, #cf46a6 5%, #e0ee63 100%);
+	background-color:#e2cdcd;
+}
+.like:active {
+	position:relative;
+	top:1px;
+}
+
+.commentsin form
+{
+  left: 0;
+  width: 100%;
+}
+
+.commentsin textarea
+{
+  background-color: #78fc7f;
+  width: 100%;
+  padding: 0px 20px;
+  height: 200px;
+  font-size: 22px;
+}
+
+
+.commentsin button
+{
+  position: relative;
+  left: 0;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color:#63b8ee;
+	border-radius:6px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	cursor:pointer;
+	color:#14396a;
+	font-family:Arial;
+	font-size:25px;
+	font-weight:bold;
+	padding:15px 100px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7cacde;
+}
+
+.commentsin button span
+{
+  font-size: larger;
+  color: #fff;
+}
+.commentsin button:hover {
+	background:linear-gradient(to bottom, #cf46a6 5%, #e0ee63 100%);
+	background-color:#e2cdcd;
+}
+
+.logout h3
+{
+  background:rgba(219, 0, 0, 0.747);
+  color:#fff;
+}
+
+.commentsout
+{
+  margin-left: 0;
+  width: 100%;
+  background:linear-gradient(to bottom, #8d0000 5%, #b35101 100%);
+	background-color:#e2cdcd;
+
+  
+}
+
+.reviewinfo h5, h4
+{
+  padding: 1%;
+  color: #fff;
+   
+}
+
+.reviewinfo img
+{
+  width: 5%;
+  height: 5%;
+  object-fit: cover;
+}
+
+@media (min-width: 601px)
+{
+  .content p iframe
+{
+  width:  600px;
+    height: 200px;
+}
+}
+
+@media (max-width: 600px)
+{
+  .content p iframe
+  {
+    width:  300px;
+    height: 200px;
+  }
+  .trailer iframe
+  {
+    width:  100%;
+
+  }
+}
+
