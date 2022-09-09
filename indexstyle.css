@@ -361,6 +361,10 @@ section .about h3
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
     text-align: left;
 }
+section .about h3 img
+{   
+    max-width: 100%;
+}
 section .annegret
 {
   position: relative;

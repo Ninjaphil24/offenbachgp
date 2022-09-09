@@ -76,11 +76,11 @@ body{
         <div class="about"></a>
 
 <h3><?php echo $lang['apply1'] ?>
-<img src="images/img0.jpg" alt=""> <br> <br>
+<img src="images/img0.png" alt=""> <br> <br>
 <?php echo $lang['apply2'] ?>
-<img src="images/img1.jpg" alt=""> <br> <br>
+<img src="images/img1.png" alt=""> <br> <br>
 <?php echo $lang['apply3'] ?>
-<img src="images/img2.jpg" alt=""> <br> <br>
+<img src="images/img2.png" alt=""> <br> <br>
 <?php echo $lang['apply4'] ?>
 </h3>
 
